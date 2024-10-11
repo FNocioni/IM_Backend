@@ -1,10 +1,12 @@
 # IM
 IM in charge
 
-# Code Owners
+# Users
 
 Federico
 
 Tia
+
+Jacob
 
 Chris
