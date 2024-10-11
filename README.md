@@ -1,5 +1,10 @@
 # IM
 IM in charge
 
-Users:
-Jacob Ang
+# Users
+
+Federico
+
+Tia
+
+Jacob
