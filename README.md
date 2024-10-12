@@ -1,4 +1,4 @@
-# IM
+# InvestmentManager
 IM in charge
 
 # CodeOwners
