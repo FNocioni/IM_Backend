@@ -1,12 +1,14 @@
-# IM
+# InvestmentManager
 IM in charge
 
-# Users
+# CodeOwners
 
-Federico
+- Tia
+- Jacob
+- Chris
+- Noumaan
 
-Tia
+# Discover Mentors
 
-Jacob
-
-Chris
+- Sujatha
+- Federico
