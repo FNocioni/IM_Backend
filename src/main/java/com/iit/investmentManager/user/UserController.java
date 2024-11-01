@@ -46,7 +46,30 @@ public class UserController {
 
         userRepository.save(newUser);
 
-        return ResponseEntity.ok("New user " + firstName + " " + lastName + " successfully registered!");
+        return ResponseEntity.ok("New user " + firstName + " " + lastName + "  successfully registered with e-mail: " + email);
+    }
+
+    @PostMapping(value = "/login")
+    public Object loginUser(@RequestParam Map<String, String> params){
+
+        String email = params.get("email");
+        String password = params.get("password");
+
+        List<UserEntity> listOfUsers = new ArrayList<>();
+        listOfUsers = userRepository.findAll();
+
+        for(UserEntity user : listOfUsers){
+            if(Objects.equals(user.getEmail(), email)){
+                if(Objects.equals(user.getPassword(), password)){
+                    return ResponseEntity.ok("Successfully logged in as: " + user.getFirstName() + " " + user.getLastName());
+                }else{
+                    return ResponseEntity.badRequest().body("Incorrect Password");
+                }
+            }
+        }
+
+        return ResponseEntity.badRequest().body("No user registered with that e-mail");
+
     }
 
 }
